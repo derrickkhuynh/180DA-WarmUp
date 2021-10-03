@@ -114,7 +114,7 @@ def main():
         _flag, img = cap.read()
         #swap the commenting on the next 2 lines to switch to RGB instead of HSV.
         hsv = cv2.cvtColor(img.copy(), cv2.COLOR_BGR2HSV)
-        hsv = cv2.cvtColor(img.copy(), cv2.COLOR_BGR2RGB)
+        #hsv = cv2.cvtColor(img.copy(), cv2.COLOR_BGR2RGB)
         hsv_mask = cv2.inRange(hsv, (low_H, low_S, low_V), (high_H, high_S, high_V))
 
         hsv_contours, hierarchy = cv2.findContours( hsv_mask.copy(), cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
